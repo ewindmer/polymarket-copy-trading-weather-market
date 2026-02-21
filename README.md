@@ -1,1 +1,1 @@
-# smart-contract-b
+# polymarket copy trading weather market
