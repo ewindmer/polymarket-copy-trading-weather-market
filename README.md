@@ -164,7 +164,7 @@ npm run build && npm start
 
 ---
 
-## Before You Scale Past $1,000
+## Before You Scale Past $10,000
 
 - [ ] Watch the first 10–20 trades execute manually in your terminal
 - [ ] Verify MongoDB is logging every detection and fill
