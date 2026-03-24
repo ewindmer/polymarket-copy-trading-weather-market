@@ -96,7 +96,7 @@ The bot scales every position to your balance automatically. You never overexpos
 | Your Balance | What to Expect | Recommended Stage |
 |---|---|---|
 | **< $500** | Very small positions - some may fail on thin markets | Testing only |
-| **$500 ~ $2,000** | Functional mirroring, real fills, real data | First 30 days |
+| **$500 ~ $2,000** | Functional mirroring, real fills, real data | Watching mirroring |
 | **$2,000 ~ $5,000** | Meaningful exposure, positions that matter | After reviewing your logs |
 | **$5,000 ~ $20,000** | Full proportional parity on most trades | With your own PnL data |
 | **> $20,000** | Large orders can move thin markets - use carefully | Advanced only |
