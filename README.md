@@ -77,7 +77,7 @@ You can follow **multiple wallets at once** by comma-separating addresses in `US
 
 ## What $5,000 Looks Like
 
-> Illustrative only — based on the proportional sizing model, not a return guarantee. Your actual fills will differ due to slippage and latency.
+> Illustrative only - based on the proportional sizing model, not a return guarantee. Your actual fills will differ due to slippage and latency.
 
 Assume your target holds $50,000 USDC. You deploy $5,000. Your sizing ratio: **10%.**
 
