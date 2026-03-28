@@ -104,16 +104,16 @@ You don't need it.
 
 The bot sizes your position proportionally to your balance vs theirs - automatically, on every trade.
 
-**Formula:** `your_balance ÷ target_balance × target_position_size × 2`
+**Formula:** `your_balance ÷ target_balance × target_position_size`
 
 Assuming the target holds **$50,000** and trades **$10,000**:
 
 | Your Balance | Sizing Ratio | Your Mirrored Position |
 |---|---|---|
-| $10,000 | 40% | **$4,000** |
-| $5,000 | 20% | **$2,000** |
-| $3,000 | 12% | **$1,200** |
-| $1,000 | 4% | **$400** |
+| $10,000 | 20% | **$2,000** |
+| $5,000 | 10% | **$1,000** |
+| $3,000 | 6% | **$600** |
+| $1,000 | 2% | **$200** |
 
 You're not betting their size. You're betting *your* proportional equivalent.  
 The math is automatic. The discipline is enforced by code, not willpower.
