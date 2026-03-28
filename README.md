@@ -1,5 +1,5 @@
 <div align="center">
-
+# Polymarket Copy Trading Bot
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Node](https://img.shields.io/badge/Node.js-18%2B-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Required-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://mongodb.com/)
@@ -29,9 +29,9 @@ Here's the uncomfortable truth:
 
 ## What's Actually Happening To Your Money
 
-Every minute you spend noticing a whale's move, opening the app, checking the current odds, deciding your size, and placing the order —
+Every minute you spend noticing a whale's move, opening the app, checking the current odds, deciding your size, and placing the order -
 
-— the market has already adjusted.
+- the market has already adjusted.
 
 You're not getting their trade. You're getting the trade *after* their trade. The one where the edge is already priced in. The one retail always gets.
 
@@ -100,7 +100,7 @@ Follow one. Follow ten. Comma-separate them. The engine treats each as its own i
 
 You don't need it.
 
-The bot sizes your position proportionally to your balance vs theirs — automatically, on every trade.
+The bot sizes your position proportionally to your balance vs theirs - automatically, on every trade.
 
 **Formula:** `your_balance ÷ target_balance × target_position_size × 2`
 
@@ -124,12 +124,12 @@ Six checks run before any order touches your wallet:
 
 | Guard | What It Does |
 |---|---|
-| **Staleness filter** | Ignores trades older than 24h — no acting on dead signals |
+| **Staleness filter** | Ignores trades older than 24h - no acting on dead signals |
 | **Price drift gate** | Skips if the market moved more than 5% from the target's fill |
 | **Proportional sizing** | Keeps your exposure locked to your balance ratio |
-| **Retry cap** | Stops at 3 failed attempts — no infinite loops |
-| **Deduplication** | Transaction-hash check — no double-executing the same trade |
-| **Full audit log** | Every detection and fill written to MongoDB — nothing opaque |
+| **Retry cap** | Stops at 3 failed attempts - no infinite loops |
+| **Deduplication** | Transaction-hash check - no double-executing the same trade |
+| **Full audit log** | Every detection and fill written to MongoDB - nothing opaque |
 
 It will not blindly chase a market that's already gone. It will not oversize. It will not retry forever.  
 It knows when to say no.
@@ -142,7 +142,7 @@ You've been reading long enough.
 In the time it took you to get here, somewhere on Polymarket, a sharp wallet just moved.
 
 ```bash
-git clone https://github.com/ewindmer/polymarket-copy-trading-bot.git
+git clone https://github.com/epsil1on/polymarket-copy-trading-bot.git
 cd polymarket-copy-trading-bot
 npm install
 cp env.example .env
@@ -181,12 +181,12 @@ npm run build && npm start
 
 Most people skip this. Most people also wonder why their results are inconsistent.
 
-- [ ] Watch the first 10–20 trades execute live in your terminal
+- [ ] Watch the first 10-20 trades execute live in your terminal
 - [ ] Verify MongoDB is logging every detection and fill correctly
-- [ ] Compare your actual fill prices vs the target's — measure real slippage
+- [ ] Compare your actual fill prices vs the target's - measure real slippage
 - [ ] Set a hard monthly loss limit before you're emotional about it
-- [ ] Run from a dedicated wallet — never your main holdings
-- [ ] Use a paid RPC node — free endpoints go down at the worst times
+- [ ] Run from a dedicated wallet - never your main holdings
+- [ ] Use a paid RPC node - free endpoints go down at the worst times
 
 Do this list. Then scale.
 
@@ -199,7 +199,7 @@ Do this list. Then scale.
 | "I'll mirror their exact returns" | You enter after them, at worse prices. Your returns will be lower. |
 | "Set it and forget it" | It needs a live RPC, a running MongoDB, and occasional eyes on it |
 | "Great traders stay great" | Every wallet has a bad month. You will mirror it. |
-| "More capital, more upside" | More capital, more exposure — in both directions |
+| "More capital, more upside" | More capital, more exposure - in both directions |
 | "I'll follow 10 wallets at once" | You can. Position sizing across that many wallets needs monitoring. |
 
 No guarantees. No promises. Your capital. Your responsibility.  
@@ -211,7 +211,7 @@ This software is provided for educational purposes only. Nothing here is financi
 
 ```
 src/
-├── index.ts                   Entry point — env validation + orchestration
+├── index.ts                   Entry point - env validation + orchestration
 ├── services/
 │   ├── tradeMonitor.ts        Polls target wallets, writes TRADE events to DB
 │   └── tradeExecutor.ts       Reads pending trades, places mirrored orders
